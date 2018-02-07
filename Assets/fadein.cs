@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class titlemanager : MonoBehaviour {
+public class fadein : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,10 +11,6 @@ public class titlemanager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButtonUp(0))
-        {
-            fadeout.fade_ok = true;
-            fadeout.next = "home";
-        }
+		
 	}
 }

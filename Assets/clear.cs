@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class titlemanager : MonoBehaviour {
-
+public class clear : MonoBehaviour {
+    public static int nowstage;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,10 +11,17 @@ public class titlemanager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButtonUp(0))
+
+    }
+    //オブジェクトが衝突したとき
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("player"))
         {
             fadeout.fade_ok = true;
             fadeout.next = "home";
+            stagemanager.stage[nowstage + 1] = true;
         }
-	}
+    }
+
 }
